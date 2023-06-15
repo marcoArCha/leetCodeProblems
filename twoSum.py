@@ -21,5 +21,19 @@ Output: [0,1]
 
 """
 
-# esto es un comentario
+class Solution:
+    def twoSum(nums, target):
+        values = {}
+        for idx, value in enumerate(nums):
+            if target - value in values:
+                return [values[target - value], idx]
+            else:
+                values[value] = idx
+
+    # Driver Code
+    num_arr = [4, 5, 1, 8]
+    pair_sum = 9    
+    # Calling function
+    print(twoSum(num_arr, pair_sum))
+    
 
