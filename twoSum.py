@@ -25,14 +25,17 @@ class Solution:
     def twoSum(nums, target):
         values = {}
         for idx, value in enumerate(nums):
-            if target - value in values:
-                return [values[target - value], idx]
+            diff = target - value
+            print(diff)
+            if diff in values:
+                return [values[diff], idx]
             else:
                 values[value] = idx
+                print(values)
 
     # Driver Code
-    num_arr = [4, 5, 1, 8]
-    pair_sum = 9    
+    num_arr = [40, 80, 77, 38, 28, 78, 4, 1]
+    pair_sum = 5    
     # Calling function
     print(twoSum(num_arr, pair_sum))
     
